@@ -1,0 +1,56 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String    @id @default(cuid()) 
+  email         String?    @unique
+  firstName     String
+  lastName      String
+  aadhaarNo     String    @unique
+  contactNo     String
+  address       String
+  voterId       String
+  hashedPassword String
+  sessions      Session[] 
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+}
+
+model Session {
+  id        String   @id @default(cuid()) 
+  userId    String   
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  user      User     @relation(fields: [userId], references: [id])
+}
+model Party {
+  id          String        @id @default(cuid())
+  partyName   String        @unique
+  partySymbol String
+  contactNo   String
+  email       String?
+  address     String
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+  members     PartyMember[]
+}
+
+model PartyMember {
+  id        String   @id @default(cuid())
+  firstName String
+  lastName  String
+  role      String
+  contactNo String
+  email     String?  @unique
+  userId   String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  party     Party    @relation(fields: [userId], references: [id])
+}
