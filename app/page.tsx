@@ -7,7 +7,7 @@ const page = () => {
   return (
     <>
       <Hero></Hero>
-      <div className="w-5/6 mx-auto md:w-1/2 py-10">
+      <div className="w-5/6 mx-auto md:w-1/2 py-10 text-left">
         <Faq></Faq>
       </div>
     </>

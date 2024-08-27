@@ -71,7 +71,7 @@ const Header = (props: Props) => {
 
   return (
     <header className="sticky top-0 z-30">
-      <section className="flex justify-between items-center p-5 md:p-0 md:pl-5 bg-zinc-50 ">
+      <section className="flex justify-between items-center p-5 md:p-0 md:pl-5 bg-zinc-50 h-[76px]">
         <Logo />
         <div className="hidden md:block relative w-1/3">
           <div className="w-full h-[76px] bg-header-pattern bg-contain relative"></div>
@@ -80,7 +80,7 @@ const Header = (props: Props) => {
           </div>
         </div>
       </section>
-      <nav className="bg-orange-400 text-orange-50 flex items-center h-16 px-6 text-lg relative">
+      <nav className="bg-orange-400 text-orange-50 flex items-center h-16 px-6 text-lg relative font-ubuntu">
         <div className="flex-1 flex items-center">
           <button
             onClick={toggleMenu}

@@ -48,14 +48,14 @@ const faqItems = [
 const Faq = () => {
   return (
     <section className="faq-section my-8">
-      <h2 className="text-2xl font-bold text-center mb-6 text-teal-900">
+      <h2 className="text-2xl font-bold text-center mb-6 text-orange-900">
         Frequently Asked Questions
       </h2>
       <Accordion type="single" collapsible className="w-full">
         {faqItems.map((item) => (
-          <AccordionItem key={item.id} value={item.id}>
+          <AccordionItem key={item.id} value={item.id} className="text-left">
             <AccordionTrigger>{item.question}</AccordionTrigger>
-            <AccordionContent>{item.answer}</AccordionContent>
+            <AccordionContent >{item.answer}</AccordionContent>
           </AccordionItem>
         ))}
       </Accordion>
