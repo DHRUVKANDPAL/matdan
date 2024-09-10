@@ -73,7 +73,7 @@ const config = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       backgroundImage: {
-        'hero-pattern': "url('https://assets.architecturaldigest.in/photos/64929ec4baa8be4f75a7b524/16:9/w_1615,h_908,c_limit/Untitled%20design%20(30).png')",
+        'hero-pattern': "url('https://upload.wikimedia.org/wikipedia/commons/d/db/View_of_Lok_Sabha_chamber_in_the_New_Parliament_building%2C_New_Delhi.jpg')",
         'header-pattern' :"url('https://i.ibb.co/FKFqHfQ/Screenshot-2024-08-26-171205.png')"
       },
       fontFamily: {
